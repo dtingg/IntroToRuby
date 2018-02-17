@@ -12,7 +12,7 @@ goal = gets.chomp.to_f
 
 # Let user enter the amount earned per lap completed (per person)
 print "Enter the amount earned per lap (per person): $"
-lap = gets.chomp.to_f
+per_lap = gets.chomp.to_f
 
 # Let user enter number of laps completed by each person (5 people)
 puts "\nPlease enter the number of laps completed by each person:"
@@ -21,9 +21,9 @@ results = {}
 
 (1..5).each do |i|
   walker_id = "Walker #{i}"
-  print "#{walker_id}:"
+  print "#{walker_id}: "
   actual_laps = gets.chomp.to_f
-  earned = "%.2f" % (actual_laps * lap)
+  earned = "%.2f" % (actual_laps * per_lap)
   puts "\tEarned $#{earned}"
   results[walker_id] = earned.to_f
 end
@@ -33,9 +33,9 @@ max_num = results.values.max
 max_walker = results.select{|k, v| v == results.values.max}
 
 if max_walker.length == 1
-  puts "Highest Earning Person: #{max_walker.keys}"
+  puts "\nHighest Earning Person: #{max_walker.keys.join(" ")}"
 else
-  puts "Highest Earning People: #{max_walker.keys}"
+  puts "\nHighest Earning People: #{max_walker.keys.join(", ")}"
 end
 
 # Determine the total amount earned for the walk-a-thon ($)
@@ -48,13 +48,11 @@ puts "$ #{"%.2f" % total}"
 puts "Goal Met?"
 
 if total >= goal
-  puts "Yes :-)"
+  puts "Yes! :-) You beat the goal by $#{"%.2f" % (total - goal).to_f}!"
 else
-  puts "No :-("
+  puts "No. :-( You missed the goal by $#{"%.2f" % (goal - total).to_f}."
 end
 
-# Display how much the goal was missed or beaten by (The goal was missed by $)
-# Display multiple walkers as highest earning, in the event of a tie for highest earner
 
 
 
