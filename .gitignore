@@ -51,3 +51,6 @@ build-iPhoneSimulator/
 
 # test
 test.rb
+
+# idea
+.idea/
