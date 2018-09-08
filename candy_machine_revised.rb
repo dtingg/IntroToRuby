@@ -17,7 +17,7 @@ end
 
 # Make a hash table to hold the selections
 # key is selection letter, values are price[0], item[1]
-candy_hash = {"A" => [1.50, "Twix"], "B" => [2.00, "Snickers"], "C" => [3.50, "Red Vines"], "D" => [4.00, "Apple Rings"], "E" => [5.25, "Salt Water Taffy"]}
+candy_hash = {:A => [1.50, "Twix"], :B => [2.00, "Snickers"], :C => [3.50, "Red Vines"], :D => [4.00, "Apple Rings"], :E => [5.25, "Salt Water Taffy"]}
 
 # Display all candy options and their costs
 puts "\nThis is what we offer:"
@@ -28,13 +28,13 @@ candy_hash.each do |key, value|
 end
 
 # Ask the user what they want. Account for lower or uppercase
-print "\nWhich option do you want?"
-user_choice = gets.chomp.capitalize
+print "\nWhich option do you want? "
+user_choice = gets.chomp.capitalize.to_sym
 
 # Make sure selection is valid (check keys in hash)
 until candy_hash.key?(user_choice)
   print "Please enter a valid candy selection: "
-  user_choice = gets.chomp.capitalize
+  user_choice = gets.chomp.capitalize.to_sym
 end
 
 # Decide if the user can afford the candy

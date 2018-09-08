@@ -29,10 +29,10 @@ vehicle = gets.chomp
 print "Food (plural): "
 food = gets.chomp
 
-print "Animal (plural)"
+print "Animal (plural): "
 animals = gets.chomp
 
-print "Verb (ending in -ing)"
+print "Verb (ending in -ing): "
 verb1 = gets.chomp
 
 print "Number: "
