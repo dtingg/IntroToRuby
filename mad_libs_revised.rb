@@ -1,4 +1,5 @@
 # Dianna's Mad Libs Game
+# Create a Mad Lib program that accepts input from the user and outputs a completed Mad Lib
 
 # Welcome the user
 puts "Welcome to Dianna's Mad Libs Game!"
@@ -43,6 +44,6 @@ liquid = gets.chomp.capitalize
 puts "\nHere is your Mad Lib:"
 
 puts "#{name1} and #{name2} promised to take me on a #{adjective1} road trip to #{state}.
-#{name1} drove his #{adjective2} #{vehicle} and #{name2} packed some delicious #{food} for lunch.
+#{name1} drove a #{adjective2} #{vehicle} and #{name2} packed some delicious #{food} for lunch.
 Along the way we saw some #{animals} #{verb1}. We also sang \"#{number} Bottles of #{liquid} on the Wall.\"
 I had a great time!"
