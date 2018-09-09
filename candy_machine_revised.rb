@@ -17,7 +17,7 @@ end
 
 # Make a hash table to hold the selections
 # key is selection letter, values are price[0], item[1]
-candy_hash = {:A => [1.50, "Twix"], :B => [2.00, "Snickers"], :C => [3.50, "Red Vines"], :D => [4.00, "Apple Rings"], :E => [5.25, "Salt Water Taffy"]}
+candy_hash = { A: [1.50, "Twix"], B: [2.00, "Snickers"], C: [3.50, "Red Vines"], D: [4.00, "Apple Rings"], E: [5.25, "Salt Water Taffy"] }
 
 # Display all candy options and their costs
 puts "\nThis is what we offer:"
