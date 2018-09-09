@@ -42,12 +42,12 @@ puts "\nELECTION RESULTS"
 # Iterate over each key and value in hash
 candidates_hash.each do |key, value|
   print "#{key} - #{value} "
-  
+
   # If they only have 1, say vote. Otherwise, say votes
   if value == 1
-    puts "vote"
+    puts 'vote'
   else
-    puts "votes"
+    puts 'votes'
   end
 end
 
@@ -59,14 +59,12 @@ winners_list = []
 
 # if candidate has max votes, add to winners list
 candidates_hash.each do |key, value|
-  if value == max_votes
-    winners_list.push (key.to_s)
-  end
+  winners_list.push(key.to_s) if value == max_votes
 end
 
 # Print the winner
 if winners_list.length == 1
-  print "The winner is : " + winners_list[0]
+  print "\nThe winner is: " + winners_list[0]
 else
-  print "It's a tie!  The winners are: " + winners_list.to_s
+  print "\nIt's a tie!  The winners are: #{winners_list.join(', ')}"
 end
