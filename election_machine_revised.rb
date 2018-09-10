@@ -4,13 +4,13 @@
 # Welcome the user to your program
 puts "Welcome to Dianna's Election Voting Program!"
 
+# Make a hash to store the candidates
+candidate_hash = { Charlie: 0, Linus: 0, Lucy: 0, Snoopy: 0 }
+
 # Print the election candidates
-puts "\nElection candidates are: Charlie, Linus, Lucy, and Snoopy."
+puts "\nElection candidates are: #{candidate_hash.keys.join(", ")}."
 puts 'Enter your vote or type Q to exit.'
 puts "\n"
-
-# Make a hash to store the candidates
-candidates_hash = { Charlie: 0, Linus: 0, Lucy: 0, Snoopy: 0 }
 
 # Poll people for their election vote until someone types q
 counter = 1
@@ -23,13 +23,13 @@ loop do
   if vote == :Q
     break
 
-  # if candidate in hash, add one to vote count
-  elsif candidates_hash.key?(vote)
-    candidates_hash[vote] += 1
+    # if candidate in hash, add one to vote count
+  elsif candidate_hash.key?(vote)
+    candidate_hash[vote] += 1
 
-  # otherwise it is a write-in.  add to hash and set votes to 1
+    # otherwise it is a write-in.  add to hash and set votes to 1
   else
-    candidates_hash[vote] = 1
+    candidate_hash[vote] = 1
   end
 
   # increment vote number
@@ -40,7 +40,7 @@ end
 puts "\nELECTION RESULTS"
 
 # Iterate over each key and value in hash
-candidates_hash.each do |key, value|
+candidate_hash.each do |key, value|
   print "#{key} - #{value} "
 
   # If they only have 1, say vote. Otherwise, say votes
@@ -52,13 +52,13 @@ candidates_hash.each do |key, value|
 end
 
 # Determine the winner - find the max number of votes
-max_votes = candidates_hash.values.max
+max_votes = candidate_hash.values.max
 
 # Create new array to hold winners
 winners_list = []
 
 # if candidate has max votes, add to winners list
-candidates_hash.each do |key, value|
+candidate_hash.each do |key, value|
   winners_list.push(key.to_s) if value == max_votes
 end
 
