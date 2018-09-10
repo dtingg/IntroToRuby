@@ -24,7 +24,7 @@ puts "\nThis is what we offer:"
 
 # Iterate over items in candy hash and print them out
 candy_hash.each do |key, value|
-  puts "#{key}  $#{'%.2f' % value[0]} #{value[1].to_s}"
+  puts "#{key}  $#{'%.2f' % value[0]} #{value[1]}"
 end
 
 # Ask the user what they want. Account for lower or uppercase

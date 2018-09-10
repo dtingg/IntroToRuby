@@ -1,4 +1,4 @@
-"""
+=begin
 Ruby program
 
 Create a MadLib program that accepts input from the user and outputs a completed MadLib
@@ -9,7 +9,8 @@ Use comments throughout to explain the code
 Reuse at least one word
 Ask for at least one number
 Explore Ruby's built in methods for strings like capitalize, downcase, upcase
-"""
+=end
+
 # Introduce the game
 puts "Welcome to Dianna's MadLib program!  Please enter some information below."
 
@@ -52,7 +53,7 @@ puts "\nHere's your MadLib:"
 
 puts "\nCome visit #{name.capitalize}'s Pizza Parlor, where you can enjoy #{adjective1.downcase} food."
 puts "You can try our famous #{food_singular.capitalize}-Lovers pizza or make your own creation."
-puts "We have a #{adjective2.downcase} selection of toppings incluidng #{food_plural1.downcase} and #{food_plural2.downcase}."
+puts "We have a #{adjective2.downcase} selection of toppings including #{food_plural1.downcase} and #{food_plural2.downcase}."
 puts "Our crusts are made in #{city.capitalize} and dusted with #{spice.downcase} to make them #{adjective3.downcase}."
 puts "We have a special every #{day.capitalize}: #{number} pizzas for $#{number} each."
 

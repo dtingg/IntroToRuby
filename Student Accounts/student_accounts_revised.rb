@@ -23,7 +23,7 @@ end
   test = 0
 
   # Make sure id doesn't already exist
-  until test != 0 && !ids.include?(test) do
+  until test != 0 && !ids.include?(test)
     test = rand(111111..999999)
   end
   ids.push(test)
@@ -36,7 +36,7 @@ def get_first_initials(student_name)
   first_initials = ""
 
   i = 0
-  while i != name_parts.length-1 do
+  while i != name_parts.length-1
     first_initials += name_parts[i][0]
     i += 1
   end
@@ -48,7 +48,7 @@ end
   emails.push(email)
 end
 
-# Print out all the student names, id numbers, and e-mail adddresses in parallel
+# Print out all the student names, id numbers, and e-mail addresses in parallel
 print "\n"
 
 5.times do |i|
