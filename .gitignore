@@ -54,3 +54,6 @@ test.rb
 
 # idea
 .idea/
+
+# Mac
+.DS_store
